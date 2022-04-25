@@ -8,16 +8,16 @@
 }
 
 .app-wrap{
-    @apply p-4 w-80 bg-slate-200 rounded-lg;
+    @apply p-4 w-80 bg-slate-100 rounded-lg;
 }
 
 .app-contents{
-    @apply flex flex-row;
+    @apply flex flex-col;
 }
 
 /*    SETTINGS   */
 .welcome{
-    @apply grid grid-cols-2 gap-4 items-center;
+    @apply grid grid-cols-2 gap-4 items-center m-2;
 }
 
 .img-txt{
@@ -30,7 +30,7 @@
 }
 
 .welcome-txt-name{
-    @apply flex flex-col pl-5;
+    @apply flex flex-col pl-2;
 }
 
 .welcome-txt-name p{
@@ -38,7 +38,7 @@
 }
 
 .welcome-txt-name h3{
-    @apply text-xl font-semibold text-black;
+    @apply text-lg font-semibold text-black;
 }
 
 .welcome-settings{
@@ -56,12 +56,70 @@
 }
 
 .card{
-    @apply flex flex-col;
+    @apply flex flex-col bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl p-3 shadow-lg;
 }
 
 .card-top{
-    @apply text-white flex flex-col;
+    @apply text-white flex flex-col text-center;
 }
+
+.card-top p{
+    @apply text-sm font-semibold;
+}
+
+.card-top h2{
+    @apply text-3xl font-bold;
+}
+
+.card-bottom{
+    @apply grid grid-cols-2 gap-4 mt-4;
+}
+
+.card-left{
+    @apply col-span-1 flex flex-row items-center justify-center;
+}
+
+.logo-card-left, .logo-card-right{
+    @apply bg-slate-200 p-1 rounded-full mr-2 text-red-500;
+}
+
+.card-left-amount, .card-right-amount{
+    @apply flex flex-col text-white;
+}
+
+.card-left-amount p, .card-right-amount p{
+    @apply text-sm font-semibold;
+}
+
+.card-left-amount h3, .card-right-amount h3{
+    @apply font-semibold text-xl;
+}
+
+.card-right{
+    @apply col-span-1 flex flex-row items-center justify-center;
+}
+
+
+/*    Transaction    */
+.transaction-wrap{
+    @apply flex flex-col;
+}
+
+.transaction{
+    @apply flex flex-row justify-between;
+}
+
+.transaction h1{
+    @apply font-bold;
+}
+
+
+
+
+
+
+
+
 /* .box-cont{
     @apply pb-14;
 }
