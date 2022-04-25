@@ -1,4 +1,5 @@
 import React from 'react'
+import TransactionComp from './TransactionComp'
 
 const Transaction = () => {
   return (
@@ -8,7 +9,12 @@ const Transaction = () => {
             <p>View All</p>
         </div>
         <div className="transaction-list">
-            
+            <ul>
+                <TransactionComp />
+                <TransactionComp />
+                <TransactionComp />
+                <TransactionComp />
+            </ul>
         </div>
     </div>
   )

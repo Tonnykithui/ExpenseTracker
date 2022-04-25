@@ -114,8 +114,28 @@
 }
 
 
+/**   TRANSACTION LIST    **/
+.transaction-component{
+    @apply flex flex-row items-center justify-between bg-white rounded-xl p-2
+    mt-3;
+}
 
+.logo{
+    @apply text-xl bg-yellow-400 rounded-full h-10 w-10 flex flex-row items-center 
+    justify-center text-white;
+}
 
+.wording{
+    @apply font-semibold;
+}
+
+.amount-time p{
+    @apply text-sm;
+}
+
+.amount-time h3{
+    @apply font-semibold;
+}
 
 
 
