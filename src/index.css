@@ -8,7 +8,7 @@
 }
 
 .app-wrap{
-    @apply p-4 w-80 bg-slate-100 rounded-lg;
+    @apply pt-4 pr-4 pl-4 pb-0 w-80 bg-slate-100 rounded-lg;
 }
 
 .app-contents{
@@ -113,6 +113,10 @@
     @apply font-bold;
 }
 
+.transaction-list{
+    @apply h-60 overflow-y-scroll;
+}
+
 
 /**   TRANSACTION LIST    **/
 .transaction-component{
@@ -137,6 +141,25 @@
     @apply font-semibold;
 }
 
+.delete{
+    @apply text-red-500;
+}
+
+.delete:hover{
+    @apply bg-slate-200 rounded-full flex flex-row items-center justify-center p-1;
+}
+
+
+/***    FOOT    ***/
+.foot{
+    @apply bg-white bottom-0 rounded-t-2xl relative p-2 h-7 w-full mt-3
+    flex flex-row justify-center;
+}
+
+.add-transaction{
+    @apply absolute bg-gradient-to-br from-pink-500 via-blue-400 to-red-500 p-3
+    text-white -top-3 rounded-full;
+}
 
 
 
