@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 import Foot from '../Footer/Foot'
+import Ntransaction from '../NewTransaction/Ntransaction'
 import Transaction from '../Transaction/Transaction'
 import Welcome from '../Welcome/Welcome'
 
@@ -12,6 +13,7 @@ const AppW = () => {
             <Card />
             <Transaction />
             <Foot />
+            <Ntransaction />
         </div>
     </div>
   )
