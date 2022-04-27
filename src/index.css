@@ -125,7 +125,7 @@
 }
 
 .logo{
-    @apply text-xl bg-yellow-400 rounded-full h-10 w-10 flex flex-row items-center 
+    @apply text-xl rounded-full h-10 w-10 flex flex-row items-center 
     justify-center text-white;
 }
 
