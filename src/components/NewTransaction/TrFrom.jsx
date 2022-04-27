@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion";
 import { useDispatch } from 'react-redux';
 import { addTransThunk } from '../../redux/AddTransaction/AddActions';
-import { toast } from 'react-toastify';
+import { getTransThunk, HideModalForm } from '../../redux';
 
 const TrFrom = () => {
     
@@ -10,20 +10,26 @@ const TrFrom = () => {
     
     const [cat, setCat] = useState('Income');
     const [note, setNote] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if(cat === "" || note === "" || amount === ""){
-            toast.info("Provide full info", { position : "top-center"})
+            alert("Provide full info")
         }
+        let today = new Date().toISOString().slice(0, 10)
+    
         const transaction = {
             cat,
             note,
-            amount
+            amount,
+            today
         }
+
         console.log(transaction);
         dispatch(addTransThunk(transaction));
+        dispatch(HideModalForm());
+        dispatch(getTransThunk());
     }
 
     const handleSelect = e => {
@@ -45,7 +51,7 @@ const TrFrom = () => {
             onChange={e => setNote(e.target.value)} />
         </div>
         <div className='form-control'>
-            <input type="number" placeholder='Amount' 
+            <input type="number" placeholder={amount ? amount : 'Amount'} 
             value={amount} onChange={e => setAmount(e.target.value)}
             />
         </div>

@@ -5,6 +5,69 @@
       "note": "dd",
       "amount": "0234",
       "id": 1
+    },
+    {
+      "cat": "Income",
+      "note": "dd",
+      "amount": "0243",
+      "id": 2
+    },
+    {
+      "cat": "Expense",
+      "note": "dfg",
+      "amount": "0455",
+      "id": 3
+    },
+    {
+      "cat": "Income",
+      "note": "wer",
+      "amount": 568,
+      "id": 4
+    },
+    {
+      "cat": "Income",
+      "note": "fr",
+      "amount": 55,
+      "id": 5
+    },
+    {
+      "cat": "Income",
+      "note": "frr",
+      "amount": 456,
+      "id": 6
+    },
+    {
+      "cat": "Expense",
+      "note": "erer",
+      "amount": 344556,
+      "id": 7
+    },
+    {
+      "cat": "Income",
+      "note": "ff",
+      "amount": 4455,
+      "time": "",
+      "id": 8
+    },
+    {
+      "cat": "Income",
+      "note": "g",
+      "amount": 45,
+      "id": 9
+    },
+    {
+      "cat": "Income",
+      "note": "sdf",
+      "amount": 345,
+      "today": "2022-04-27",
+      "id": 10
+    },
+    {
+      "cat": "Income",
+      "note": "sdf",
+      "amount": 23445,
+      "today": "2022-04-27",
+      "id": 11
     }
   ]
 }
