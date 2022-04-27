@@ -1,3 +1,10 @@
 {
-    "expenses":[]
+  "expenses": [
+    {
+      "cat": "Income",
+      "note": "dd",
+      "amount": "0234",
+      "id": 1
+    }
+  ]
 }

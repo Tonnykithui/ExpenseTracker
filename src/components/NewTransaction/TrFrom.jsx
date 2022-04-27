@@ -1,21 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion";
+import { useDispatch } from 'react-redux';
+import { addTransThunk } from '../../redux/AddTransaction/AddActions';
+import { toast } from 'react-toastify';
 
 const TrFrom = () => {
-  return (
-    <form >
+    
+    const dispatch = useDispatch();
+    
+    const [cat, setCat] = useState('Income');
+    const [note, setNote] = useState('');
+    const [amount, setAmount] = useState(0);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(cat === "" || note === "" || amount === ""){
+            toast.info("Provide full info", { position : "top-center"})
+        }
+        const transaction = {
+            cat,
+            note,
+            amount
+        }
+        console.log(transaction);
+        dispatch(addTransThunk(transaction));
+    }
+
+    const handleSelect = e => {
+        setCat(e.target.value);        
+    }
+
+    return (
+    <form onSubmit={handleSubmit}>
         <div className='form-control'>
             <label>Category</label>
-            <select name="" id="">
-                <option value="">Income</option>
-                <option value="">Expense</option>
+            <select name="" id="" multiple={false} value={cat}
+             onChange={handleSelect}>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
             </select>
         </div>
         <div className='form-control'>
-            <input type="text" placeholder='Note' />
+            <input type="text" placeholder='Note' value={note} 
+            onChange={e => setNote(e.target.value)} />
         </div>
         <div className='form-control'>
-            <input type="number" placeholder='Amount' />
+            <input type="number" placeholder='Amount' 
+            value={amount} onChange={e => setAmount(e.target.value)}
+            />
         </div>
         <div className='form-control'>
             <motion.button 

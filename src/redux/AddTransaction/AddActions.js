@@ -31,7 +31,7 @@ export const addTransThunk = (transaction) => {
   return (dispatch) => {
     dispatch(addTransReq());
     axios
-      .post("http://localhost/5000/expenses", transaction)
+      .post("http://localhost:5000/expenses", transaction)
       .then((response) => {
         const feed = response.data;
         dispatch(addTransSucc(feed));
