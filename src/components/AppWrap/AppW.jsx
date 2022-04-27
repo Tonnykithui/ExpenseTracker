@@ -4,8 +4,11 @@ import Foot from '../Footer/Foot'
 import Ntransaction from '../NewTransaction/Ntransaction'
 import Transaction from '../Transaction/Transaction'
 import Welcome from '../Welcome/Welcome'
+import { useSelector } from 'react-redux';
 
 const AppW = () => {
+
+  const showForm = useSelector(state => state.loading);
   return (
     <div className='app-wrap'>
         <div className="app-contents">
@@ -13,7 +16,12 @@ const AppW = () => {
             <Card />
             <Transaction />
             <Foot />
-            <Ntransaction />
+            {
+              showForm ? (
+                <Ntransaction />
+              ) : ''
+            }
+            
         </div>
     </div>
   )

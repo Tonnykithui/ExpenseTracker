@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 const TrFrom = () => {
   return (
@@ -17,7 +18,18 @@ const TrFrom = () => {
             <input type="number" placeholder='Amount' />
         </div>
         <div className='form-control'>
-            <button className='btn'>Submit</button>
+            <motion.button 
+            className='btn'
+            whileHover={{
+                scale:'1.1'
+            }}
+
+            whileTap={{
+                scale:'0.8'
+            }}
+            >
+                Submit
+            </motion.button>
         </div>
     </form>
   )
