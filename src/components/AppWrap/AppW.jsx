@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 const AppW = () => {
 
-  const showForm = useSelector(state => state.loading);
+  const showForm = useSelector(state => state.addTransactionForm.loading);
   return (
     <div className='app-wrap'>
         <div className="app-contents">
