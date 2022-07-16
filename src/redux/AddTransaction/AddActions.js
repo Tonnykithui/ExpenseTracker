@@ -5,7 +5,7 @@ import {
 } from "./AddType";
 
 import axios from "axios";
-import { getTransReq } from "../GetTransaction/GetTransActions";
+import { getTransThunk } from "../GetTransaction/GetTransActions";
 
 export const addTransReq = (transaction) => {
   return {
@@ -31,11 +31,11 @@ export const addTransErr = (error) => {
 export const addTransThunk = (transaction) => {
   return (dispatch) => {
     dispatch(addTransReq());
-    dispatch(getTransReq());
     axios
       .post("http://localhost:5000/expenses", transaction)
       .then((response) => {
         const feed = response.data;
+        dispatch(getTransThunk());
         dispatch(addTransSucc(feed));
       })
       .catch((error) => {

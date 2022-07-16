@@ -1,3 +1,39 @@
 {
-  "expenses": []
+  "expenses": [
+    {
+      "cat": "Expense",
+      "note": "Rent",
+      "amount": 7500,
+      "today": "2022-07-16",
+      "id": 2
+    },
+    {
+      "cat": "Expense",
+      "note": "Food",
+      "amount": 4000,
+      "today": "2022-07-16",
+      "id": 3
+    },
+    {
+      "cat": "Income",
+      "note": "Salary",
+      "amount": 30000,
+      "today": "2022-07-16",
+      "id": 4
+    },
+    {
+      "cat": "Income",
+      "note": "electricity",
+      "amount": 500,
+      "today": "2022-07-16",
+      "id": 5
+    },
+    {
+      "cat": "Expense",
+      "note": "water",
+      "amount": 1000,
+      "today": "2022-07-16",
+      "id": 6
+    }
+  ]
 }
